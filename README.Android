@@ -46,5 +46,13 @@ Considerably easier with a cross-compilation enable distribution, swap architect
 
   CC=aarch64-linux-gnu-gcc-4.9 STATIC=1 make
 
+=== In Qualcomm 8155/8295 platform ===
+# Download the align_fix.py from below link:
+# https://github.com/Lzhiyong/termux-ndk/blob/master/patches/align_fix.py
+# And then run it like:
+  python3 align_fix.py stress-ng.bin
+# otherwise, you will get below error:
+# error: "./stress-ng": executable's TLS segment is underaligned: alignment is 8, needs to be at least 64 for ARM64 Bionic
+
 M.Srikanth Kumar, Jul 14, 2015
 Colin Ian King,   Dec  6, 2016 (updated, static linking)
